@@ -1,0 +1,91 @@
+#plan{
+    z-index: 1;
+    position: fixed;
+    left: 10%;
+    min-width: 70%;
+    height: auto;
+}
+
+#machines{
+    z-index: 999;
+    position: fixed;
+}
+
+#machines>div>img{
+    width: 5%;
+    position: fixed;
+    cursor: pointer;
+}
+
+.statusOk>p{
+    color: springgreen;
+}
+
+.statusAlert>p{
+    color: red;
+}
+
+[status]::before{
+    content: attr(status);
+}
+
+[status="1"]{filter: invert(0%);}
+[status="0"]{filter: hue-rotate(130deg) contrast(400%) saturate(700%);}
+
+.info{
+    z-index:99999;
+	width:600px;
+	height:auto;
+	position:absolute;
+	left:35%;
+	top:10%;
+	background-color:white;
+	border: 3px solid black;
+    display:none;
+}
+
+.info>h2{
+    margin:0;
+	padding:5px;
+	text-align:center;
+	background-color:orange;
+}
+
+.info>button{
+    position:inherit;
+    height:20px;
+    padding:0px;
+    margin:0;
+    color:black;
+    font-weight:bold;
+	border: 2px solid black;
+	cursor:pointer;
+}
+
+.closeBtn{
+	width:20px;
+	background-color:red;
+	right:5px;
+    top:5px;
+}
+
+.okBtn{
+	width:30px;
+	background-color:springgreen;
+    right: 5px;
+    bottom: 10px;
+}
+
+.alertBtn{
+	width:40px;
+	background-color:red;
+    right: 45px;
+    bottom: 10px;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+
